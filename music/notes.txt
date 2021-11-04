@@ -1,0 +1,18 @@
+ffmpeg -i /path/to/inputfile.mp3 -af loudnorm=I=-16:dual_mono=true:TP=-1.5:LRA=11:print_format=summary -f null -
+
+normalise to -11 LUFS
+
+make start match
+offset: 01105samples
+
+middle offset: 47 samples?
+
+Input #0, ogg, from 'joker.ogg':
+  Duration: 00:01:41.05, start: 0.000000, bitrate: 194 kb/s
+  Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 192 kb/s
+    Metadata:
+      ENCODER         : FL Studio
+
+ffmpeg -i export.flac -ar 44100 -b:a 192k joker-rotten.ogg
+
+todo: still improve loop more? nah compared to original it's ok lol
